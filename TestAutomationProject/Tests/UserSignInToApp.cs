@@ -36,6 +36,14 @@ namespace TestAutomationProject.Tests
             Thread.Sleep(2000);
             Assert.That(mainPage.ErrorMsgLogin,Is.EqualTo("Authentication failed."));
         }
+        [Test]
+        public void UserCanNotSignInWithIncorrectLogin()
+        {
+            mainPage.NavigateToSignInPage();
+            signInBlock.SignIn(TestData.NegativeUser.Mail, TestData.NegativeUser.Password);
+            Thread.Sleep(2000);
+            Assert.That(mainPage.ErrorMsgLogin, Is.EqualTo("Authentication failed."));
+        }
         [TearDown]
         public void TierDown()
         {
