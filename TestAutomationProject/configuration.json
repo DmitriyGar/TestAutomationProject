@@ -1,0 +1,18 @@
+{
+  "Environment": "qa",
+  "Url": "http://automationpractice.com/index.php",
+  "Users": [
+    {
+      "Type": "positive",
+      "Mail": "testuser1@mail.com",
+      "First_name": "Dmytro",
+      "Last_name": "Harus",
+      "Password": "12345"
+    },
+    {
+      "Type": "negative",
+      "Mail": "NegativeTestUser@mail.com",
+      "Password": "1dfdf"
+    }
+  ]
+}
