@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IWebDriverExtension.cs" />
     <Compile Include="Models\AppConfig.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PageObject\BaseObjects.cs" />
