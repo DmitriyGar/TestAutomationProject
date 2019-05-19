@@ -7,16 +7,14 @@ namespace TestAutomationProject.Tests
     class BaseTest
     {
         protected SeleniumDriver _selenium;
-        protected readonly MainPage mainPage;
-        protected readonly SignInBlock signInBlock;
+        protected Pages Pages;
+        
         public BaseTest()
         {
             _selenium = new SeleniumDriver();
-            if (mainPage == null)
-                mainPage=new MainPage(_selenium.Driver);
-            if (signInBlock == null)
-                signInBlock = new SignInBlock(_selenium.Driver);
+            Pages = new Pages(_selenium.Driver);
         }
+
         [OneTimeTearDown]
         public void PostConditions()
         {

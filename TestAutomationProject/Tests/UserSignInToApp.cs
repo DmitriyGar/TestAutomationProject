@@ -10,42 +10,42 @@ namespace TestAutomationProject.Tests
         [SetUp]
         public void SetUp()
         {
-            mainPage.NavigateToMainPage();
+            Pages.MainPage.NavigateToMainPage();
         }
         [Test]
         public void UserCanSignIn()
         {
-            mainPage.NavigateToSignInPage();
-            signInBlock.SignIn(TestData.PositiveUser.Mail,TestData.PositiveUser.Password);
-            Assert.That(signInBlock.UserName,Is.EqualTo(TestData.PositiveUser.First_name+" "+TestData.PositiveUser.Last_name));
+            Pages.MainPage.NavigateToSignInPage();
+            Pages.SignInBlock.SignIn(TestData.PositiveUser.Mail,TestData.PositiveUser.Password);
+            Assert.That(Pages.SignInBlock.UserName,Is.EqualTo(TestData.PositiveUser.First_name+" "+TestData.PositiveUser.Last_name));
         }
         [Test]
         public void UserCanNotSignInWithIncorrectPassword()
         {
-            mainPage.NavigateToSignInPage();
-            signInBlock.SignIn(TestData.PositiveUser.Mail, TestData.NegativeUser.Password);
-            Assert.That(mainPage.ErrorMsgLogin,Is.EqualTo("Authentication failed."));
+            Pages.MainPage.NavigateToSignInPage();
+            Pages.SignInBlock.SignIn(TestData.PositiveUser.Mail, TestData.NegativeUser.Password);
+            Assert.That(Pages.MainPage.ErrorMsgLogin,Is.EqualTo("Authentication failed."));
         }
         [Test]
         public void UserCanNotSignInWithIncorrectLogin()
         {
-            mainPage.NavigateToSignInPage();
-            signInBlock.SignIn(TestData.NegativeUser.Mail, TestData.NegativeUser.Password);
-            Assert.That(mainPage.ErrorMsgLogin, Is.EqualTo("Authentication failed."));
+            Pages.MainPage.NavigateToSignInPage();
+            Pages.SignInBlock.SignIn(TestData.NegativeUser.Mail, TestData.NegativeUser.Password);
+            Assert.That(Pages.MainPage.ErrorMsgLogin, Is.EqualTo("Authentication failed."));
         }
 
         [Test]
         public void UserCanNotSignInWithoutCreds()
         {
-            mainPage.NavigateToSignInPage();
-            signInBlock.SignIn("", "");
-            Assert.That(mainPage.ErrorMsgLogin, Is.EqualTo("An email address required."));
+            Pages.MainPage.NavigateToSignInPage();
+            Pages.SignInBlock.SignIn("", "");
+            Assert.That(Pages.MainPage.ErrorMsgLogin, Is.EqualTo("An email address required."));
         }
 
         [TearDown]
         public void TierDown()
         {
-           mainPage.LogOut();
+           Pages.MainPage.LogOut();
         }
     }
 }
