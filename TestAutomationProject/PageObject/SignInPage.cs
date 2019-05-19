@@ -33,17 +33,16 @@ namespace TestAutomationProject.PageObject
             Driver.GetElement(_forgotPasswordLink).Click();
         }
 
-        public void SignUp(string email)
+        public void SignUp(string mail)
         {
-            Driver.FindElement(_loginButton).Click();
-            Driver.FindElement(_emailField).SendKeys(email);
-            Driver.FindElement(_createAccountBtn).Click();
+            Driver.GetElement(_loginButton).Click();
+            Driver.GetElement(_emailField).SendKeys(MakeNameWithDate(mail));
+            Driver.GetElement(_createAccountBtn).Click();
         }
         private string MakeNameWithDate(string name)  //TODO
         {
             string full_name="";
-            DateTime date = new DateTime();
-            //full_name=name+date.ToShortDateString("yyyy-mm-dd");
+            full_name=DateTime.Now.ToString("yyyy-mm-dd_hh-mm-ss")+"_"+ name;
             return full_name;
         }
     }
