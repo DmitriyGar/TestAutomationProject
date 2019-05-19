@@ -8,7 +8,7 @@ namespace TestAutomationProject.Extensions
 {
     public static class IWebDriverExtension
     {
-        public static IWebElement GetElement(this IWebDriver driver,By locator)
+        public static IWebElement GetElement(this ISearchContext driver,By locator)
         {
             Stopwatch wait = Stopwatch.StartNew();
             IWebElement element = null;
