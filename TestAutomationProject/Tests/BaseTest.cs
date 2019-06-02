@@ -13,7 +13,7 @@ namespace TestAutomationProject.Tests
         [OneTimeTearDown]
         public void PostConditions()
         {
-            _selenium.CloseDriver();
+            //_selenium.CloseDriver();
         }
     }
     

@@ -39,7 +39,7 @@ namespace TestAutomationProject.PageObject
             Driver.GetElement(_emailField).SendKeys(MakeNameWithDate(mail));
             Driver.GetElement(_createAccountBtn).Click();
         }
-        private string MakeNameWithDate(string name)  //TODO
+        private string MakeNameWithDate(string name)  //Its not good way
         {
             string full_name="";
             full_name=DateTime.Now.ToString("yyyy-mm-dd_hh-mm-ss")+"_"+ name;

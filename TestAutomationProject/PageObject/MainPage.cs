@@ -15,6 +15,8 @@ namespace TestAutomationProject.PageObject
         private readonly By _errorMsgSignIn = By.XPath("//div[@class='alert alert-danger']//li");
         private readonly By _errorMsgSignUp = By.XPath("//div[@id='create_account_error']/ol/li");
         private readonly By _contactUsButton = By.Id("contact-link");
+        private readonly By _tShortTab = By.XPath("//li/a[contains(text(),'T-shirts') and @title='T-shirts'] ");
+
 
         public IWebElement LogOutButton=>Driver.FindElements(_logOutButton).FirstOrDefault();
         public string UserName => Driver.GetTextElement(_userName);
@@ -29,8 +31,13 @@ namespace TestAutomationProject.PageObject
         public void NavigateToSignInPage()
         {
             Driver.GetElement(_logInButton).Click();
-            Driver.GetElement(_logInButton).Click();
+            
         }
+        public void OpenTshirtTopic()
+        {
+            Driver.GetElement(_tShortTab).Click();
+        }
+        
         public void LogOut()
         {
             if (LogOutButton != null)
