@@ -12,7 +12,7 @@ namespace TestAutomationProject.Utilities
     //this class is for deserialization of test data from configuration.json
     public static class TestData                                    
     {
-        private static string _json => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configuration.json");
+        private static string _json => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Tests/configuration.json");
         public static User PositiveUser {get; }
         public static User NegativeUser { get; }
         public static string Url { get; }

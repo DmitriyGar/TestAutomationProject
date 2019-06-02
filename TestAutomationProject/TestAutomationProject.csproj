@@ -63,12 +63,16 @@
     <Compile Include="Models\PersonalInformation.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PageObject\BaseObjects.cs" />
+    <Compile Include="PageObject\CartLayer.cs" />
     <Compile Include="PageObject\CreateAccountPage.cs" />
     <Compile Include="PageObject\MainPage.cs" />
     <Compile Include="PageObject\Pages.cs" />
+    <Compile Include="PageObject\ProductItemFrame.cs" />
+    <Compile Include="PageObject\SearchProductsBlock.cs" />
     <Compile Include="PageObject\SignInPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\BaseTest.cs" />
+    <Compile Include="Tests\UserCanOrderProduct.cs" />
     <Compile Include="Tests\UserSignUpToApp.cs" />
     <Compile Include="Tests\UserSignInToApp.cs" />
     <Compile Include="Utilities\SeleniumDriver.cs" />
@@ -77,6 +81,9 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Tests\configuration.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
