@@ -64,6 +64,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="PageObject\BaseObjects.cs" />
     <Compile Include="PageObject\CartLayer.cs" />
+    <Compile Include="PageObject\CartPage.cs" />
     <Compile Include="PageObject\CreateAccountPage.cs" />
     <Compile Include="PageObject\MainPage.cs" />
     <Compile Include="PageObject\Pages.cs" />

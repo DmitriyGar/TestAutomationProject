@@ -7,13 +7,13 @@ namespace TestAutomationProject.Tests
     class BaseTest
     {
         protected SeleniumDriver _selenium = new SeleniumDriver();
-        private Pages _pages;
+        private Pages _pages=null;
         protected Pages Pages=>_pages ?? (new Pages(_selenium.Driver));
         
         [OneTimeTearDown]
         public void PostConditions()
         {
-            //_selenium.CloseDriver();
+            _selenium.CloseDriver();
         }
     }
     
