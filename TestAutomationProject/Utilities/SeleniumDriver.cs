@@ -16,8 +16,10 @@ namespace TestAutomationProject.Utilities
             get
             {
                 if (_driver == null)
+                {
                     _driver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory, GetChromeOptions());
-                _driver.Manage().Cookies.DeleteAllCookies();
+                    _driver.Manage().Cookies.DeleteAllCookies();
+                }
                 return _driver;
             }
         }

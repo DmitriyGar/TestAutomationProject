@@ -27,7 +27,10 @@ namespace TestAutomationProject.Extensions
 
         public static string GetTextElement(this IWebDriver driver,By element)
         {
-            return driver.FindElements(element).FirstOrDefault()?.Text.Trim();
+            string getText = "";
+            if (driver.GetElement(element).Text.Trim()!=null)
+            getText = driver.GetElement(element).Text.Trim();
+            return getText;
         }
     }
 }

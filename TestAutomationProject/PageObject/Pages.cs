@@ -15,6 +15,7 @@ namespace TestAutomationProject.PageObject
         public SearchProductsBlock SearchProductsBlock { get; }
         public ProductItemFrame ProductItemFrame { get; }
         public CartLayer CartLayer { get; }
+        public CartPage CartPage { get; }
         public Pages(IWebDriver driver)
         {
             if (MainPage == null)
@@ -29,6 +30,8 @@ namespace TestAutomationProject.PageObject
                 ProductItemFrame = new ProductItemFrame(driver);
             if (CartLayer == null)
                 CartLayer = new CartLayer(driver);
+            if (CartPage == null)
+                CartPage = new CartPage(driver);
         }
     }
 }
