@@ -23,6 +23,7 @@ namespace TestAutomationProject.Utilities
                 return _driver;
             }
         }
+
         private ChromeOptions GetChromeOptions()
         {
             var options = new ChromeOptions();
