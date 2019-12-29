@@ -14,13 +14,12 @@ namespace TestAutomationProject.Extensions
             IWebElement element = null;
             while (element == null)
             {
-                Debug.WriteLine("in while");
+                Thread.Sleep(1000);
                 element = driver.FindElements(locator).FirstOrDefault();
-                if (wait.Elapsed > TimeSpan.FromSeconds(5) && element == null)
+                if (wait.Elapsed > TimeSpan.FromSeconds(10) && element == null)
                 {
                     throw new NoSuchElementException($"Locator not found: {locator}");
-                }
-                Thread.Sleep(500);
+                } 
             }
             return element;
         }

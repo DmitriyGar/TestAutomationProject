@@ -19,6 +19,7 @@ namespace TestAutomationProject.PageObject
         private By _quickViewButton = By.XPath("//a[@class='quick-view']");
         private By _plusQtyProduct = By.XPath("//a[@class='btn btn-default button-plus product_quantity_up']");
 
+
         public ProductItemFrame(IWebDriver driver) : base(driver) { }
 
         public void OpenProductItem()
