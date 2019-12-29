@@ -3,7 +3,8 @@
     "directory": "allure-results",
     "links": [
       "https://github.com/DmitriyGar/TestAutomationProject/issues/{issue}",
-      "https://github.com/DmitriyGar/TestAutomationProject/projects/2#card-{tms}"
+      "https://github.com/DmitriyGar/TestAutomationProject/projects/2#card-{tms}",
+      "C:\\Program Files (x86)\\Jenkins\\workspace\\allure-report"
     ]
   }
 }
