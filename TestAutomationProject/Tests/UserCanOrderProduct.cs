@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +31,10 @@ namespace TestAutomationProject.Tests
             Pages.MainPage.NavigateToSignInPage();
             Pages.SignInPage.SignIn(TestData.PositiveUser.Mail, TestData.PositiveUser.Password);
         }
-    
+
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("OrderProduct")]
         [Test]
         public void LoggedInUserCanOrderProduct()
         {

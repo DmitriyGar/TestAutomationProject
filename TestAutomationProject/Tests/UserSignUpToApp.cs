@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +21,10 @@ namespace TestAutomationProject.Tests
             {
                 Pages.MainPage.NavigateToMainPage();
             }
-        
-            [Test]
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("UserCanSignUp")]
+        [Test]
             public void UserCanSignUp()
             {
             _info = new PersonalInformation();

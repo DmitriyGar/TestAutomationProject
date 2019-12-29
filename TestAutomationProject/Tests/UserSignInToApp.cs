@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Framework;
 using TestAutomationProject.Utilities;
 
 namespace TestAutomationProject.Tests
@@ -12,6 +14,10 @@ namespace TestAutomationProject.Tests
         {
             Pages.MainPage.NavigateToMainPage();
         }
+
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("UserCanSignIn")]
         [Test]
         public void UserCanSignIn()
         {
@@ -19,6 +25,10 @@ namespace TestAutomationProject.Tests
             Pages.SignInPage.SignIn(TestData.PositiveUser.Mail,TestData.PositiveUser.Password);
             Assert.That(Pages.SignInPage.UserName,Is.EqualTo(TestData.PositiveUser.First_name+" "+TestData.PositiveUser.Last_name));
         }
+
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("UserCanNotSignInWithIncorrectPassword")]
         [Test]
         public void UserCanNotSignInWithIncorrectPassword()
         {
@@ -26,6 +36,9 @@ namespace TestAutomationProject.Tests
             Pages.SignInPage.SignIn(TestData.PositiveUser.Mail, TestData.NegativeUser.Password);
             Assert.That(Pages.MainPage.ErrorMsgLogin,Is.EqualTo("Authentication failed."));
         }
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("UserCanNotSignInWithIncorrectLogin")]
         [Test]
         public void UserCanNotSignInWithIncorrectLogin()
         {
@@ -34,6 +47,9 @@ namespace TestAutomationProject.Tests
             Assert.That(Pages.MainPage.ErrorMsgLogin, Is.EqualTo("Authentication failed."));
         }
 
+        [AllureTag("CI")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureSubSuite("UserCanNotSignInWithoutCreds")]
         [Test]
         public void UserCanNotSignInWithoutCreds()
         {
