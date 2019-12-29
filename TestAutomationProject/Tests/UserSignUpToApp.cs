@@ -19,7 +19,7 @@ namespace TestAutomationProject.Tests
             {
                 Pages.MainPage.NavigateToMainPage();
             }
-        //
+        
             [Test]
             public void UserCanSignUp()
             {
