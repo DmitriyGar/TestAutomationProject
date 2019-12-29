@@ -7,13 +7,9 @@ C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationPro
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\TestAutomationProject.pdb
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\nunit.framework.dll
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.dll
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.Support.dll
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\nunit.framework.pdb
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\nunit.framework.xml
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.xml
-C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.Support.xml
+C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.Support.dll
+C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\bin\Debug\WebDriver.dll
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\obj\Debug\TestAutomationProject.csprojAssemblyReference.cache
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\obj\Debug\TestAutomationProject.csproj.CoreCompileInputs.cache
 C:\Users\Dmitriy\source\repos\DmitriyGar\TestAutomationProject\TestAutomationProject\obj\Debug\TestAutomationProject.csproj.CopyComplete
